@@ -1,0 +1,142 @@
+.App {
+    text-align: center;
+  }
+  
+  
+.App-header {
+  background-image: url('./pages/6706530.jpg'); /* Adjust the path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(0px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1em + 1.5vmin);
+  color: black;
+  padding: 1em;
+  position: relative;
+}
+
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./pages/6706530.jpg'); /* Adjust the path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
+  
+  table {
+    border-collapse: collapse;
+    border: 3px solid bisque;
+    background-color: bisque;
+    width: 90%;
+    max-width: 500px; /* Adjusted max-width to prevent distortion */
+    aspect-ratio: 1; /* Maintains a square aspect ratio */
+  }
+  
+  td {
+    padding: 0;
+    width: 11.11%; /* Ensures cells are equally sized */
+    height: 0;
+    padding-bottom: 11.11%; /* Maintains square aspect ratio */
+    position: relative;
+  }
+  
+  input.cellInput {
+    width: 100%;
+    height: 100%;
+    font-size: calc(0.8em + 0.5vmin);
+    text-align: center;
+    padding: 0;
+    border: 1px solid black;
+    color: black;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .buttonContainer {
+    margin-top:  20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .solveButton, .checkButton, .resetButton {
+    font-weight: bold;
+    padding: 5px 10px; /* Adjusted padding for smaller buttons */
+    border: none;
+    border-radius: 10px; /* Smaller border-radius for better proportion */
+    font-size: calc(0.6em + 0.5vmin); /* Font size adjusted for smaller buttons */
+    color: white;
+  }
+  
+  .solveButton {
+    background-color: green;
+  }
+  
+  .checkButton {
+    background-color: orange;
+  }
+  
+  .resetButton {
+    background-color: red;
+  }
+  
+  .bBorder {
+    border-bottom: 2px solid black;
+  }
+  
+  .rBorder {
+    border-right: 2px solid black;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+      max-width: none;
+    }
+  
+    input.cellInput {
+      font-size: calc(0.6em + 1vmin);
+    }
+  
+    .buttonContainer {
+      flex-direction: row; /* Ensure buttons stay in a row on smaller screens */
+      flex-wrap: wrap; /* Allows wrapping if necessary */
+    }
+  
+    .solveButton, .checkButton, .resetButton {
+      font-size: calc(0.7em + 0.5vmin); /* Smaller font size for smaller screens */
+      padding: 8px 12px; /* Adjusted padding for better button size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    input.cellInput {
+      font-size: calc(0.5em + 1.5vmin);
+    }
+  
+    .buttonContainer {
+      flex-direction: row; /* Ensure buttons stay in a row on very small screens */
+    }
+  
+    .solveButton, .checkButton, .resetButton {
+      font-size: calc(0.6em + 0.5vmin); /* Further reduced font size */
+      padding: 6px 10px; /* Further adjusted padding */
+    }
+  }
+  
